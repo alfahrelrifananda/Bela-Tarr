@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Libre Baskerville", serif;
+  scroll-behavior: smooth;
+}
+.god {
+  display: flex;
+}
+aside {
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+aside ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 1.1em;
+  padding-right: 30px;
+}
+aside ul li a {
+  text-decoration: none;
+  color: #9d9d9d;
+  font-weight: 500;
+  cursor: pointer;
+}
+aside ul li a {
+  box-shadow: inset 0 0 0 0 #ffffff;
+  color: #dedede;
+  padding: 0 0.25rem;
+  margin: 0 -0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+aside ul li a:hover {
+  color: #000000;
+  box-shadow: inset 300px 0 0 0 #ffffff;
+}
+
+.container {
+  width: 80%;
+  margin-left: 20%;
+  overflow: hidden;
+}
+.container #home {
+  width: 100%;
+  height: 100vh;
+  background-color: #101010;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container #home .text {
+  color: #f1eeee;
+  width: 30vw;
+}
+.container #home .image {
+  background-image: url("../assets/img/image-w856.webp");
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 300px;
+  transition: all 0.3s ease;
+  box-shadow: #ffffff -15px 15px;
+}
+
+.container #biography {
+  width: 100%;
+  height: 100vh;
+  background-color: #c8c8c8;
+  overflow: hidden;
+}
+.container #biography .content {
+  background-image: url("../assets/img/bio.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: end;
+  width: 100%;
+  height: 100%;
+}
+.container #biography .content .info {
+  color: white;
+  width: 37.5%;
+  height: 60%;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+.container #biography .content .info div {
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+}
+.paragraph {
+  display: none;
+}
+
+.container #biography .content .info .control {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  gap: 85%;
+}
+.container #biography .content .info .control button {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.container #biography .content .info .control button:hover {
+  opacity: 0.5;
+}
+.arrow {
+  border: solid #ffffff;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.container #famous-movies {
+  width: 100%;
+  height: 100vh;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container #famous-movies h1 {
+  width: 75vw;
+}
+.container #famous-movies .movie {
+  width: 75vw;
+  height: 80%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.container #famous-movies .movie .m-list {
+  width: 300px;
+  height: 100%;
+}
+.container #famous-movies .movie .m-list .m {
+  background-size: cover;
+  background-position: center;
+  height: 20%;
+  width: 100%;
+  cursor: pointer;
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+.container #famous-movies .movie .m-list .m:hover {
+  filter: brightness(70%);
+  color: white;
+}
+.container #famous-movies .movie .m-list .m:nth-child(1) {
+  background-image: url("../assets/img/satantango.jpg");
+}
+.container #famous-movies .movie .m-list .m:nth-child(2) {
+  background-image: url("../assets/img/turin.png");
+}
+.container #famous-movies .movie .m-list .m:nth-child(3) {
+  background-image: url("../assets/img/werck.jpg");
+}
+.container #famous-movies .movie .m-list .m:nth-child(4) {
+  background-image: url("../assets/img/damn.jpeg");
+}
+.container #famous-movies .movie .m-list .m:nth-child(5) {
+  background-image: url("../assets/img/london.jpg");
+}
+.container #famous-movies .movie .m-big {
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/img/satantango.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: end;
+  overflow: hidden;
+  border-right: 5px solid white;
+}
+.container #famous-movies .movie .m-big div {
+  width: 90%;
+  height: 30%;
+  color: white;
+  padding: 5%;
+  background-image: linear-gradient(0deg, rgb(0, 0, 0), rgba(255, 255, 255, 0));
+}
+.container #famous-movies .movie .m-big div p {
+  height: 50%;
+}
+.container #famous-movies .movie .m-big div:nth-child(1) {
+  display: block;
+}
+
+.container #quotes {
+  width: 100%;
+  height: 100vh;
+  background-color: #1a1a1a;
+  overflow: hidden;
+}
+.container #quotes h1 {
+  text-align: center;
+  color: white;
+}
+.container #quotes .q1,
+.container #quotes .q2,
+.container #quotes .q3 {
+  width: 100%;
+  height: 30%;
+  display: flex;
+}
+.container #quotes .q1 {
+  justify-content: end;
+}
+.container #quotes .q2 {
+  justify-content: center;
+}
+.container #quotes .q3 {
+  justify-content: baseline;
+}
+.container #quotes .q1 .q,
+.container #quotes .q2 .q,
+.container #quotes .q3 .q {
+  width: 35%;
+  height: 90%;
+  color: #c8c8c8;
+  background-color: #111111;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+  opacity: 0.3;
+}
+.container #quotes .q1 .q:hover,
+.container #quotes .q2 .q:hover,
+.container #quotes .q3 .q:hover {
+  opacity: 1;
+}
+.container #quotes .q1 .q .quo,
+.container #quotes .q2 .q .quo,
+.container #quotes .q3 .q .quo {
+  font-size: 5rem;
+  opacity: 0.5;
+  position: relative;
+  top: -15%;
+}
+
+.container #gallery {
+  width: 100%;
+  height: 100vh;
+  background-color: #121212;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+.container #gallery .g {
+  width: 70%;
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+.container #gallery .g div {
+  width: 20%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  opacity: 0.5;
+}
+.container #gallery .g div:hover {
+  opacity: 1;
+  width: 80%;
+}
+.container #gallery .g div:nth-child(1) {
+  background-image: url("../assets/img/1.png");
+}
+.container #gallery .g div:nth-child(2) {
+  background-image: url("../assets/img/2.jpeg");
+}
+.container #gallery .g div:nth-child(3) {
+  background-image: url("../assets/img/3.jpg");
+}
+.container #gallery .g div:nth-child(4) {
+  background-image: url("../assets/img/4.jpg");
+}
+.container #gallery .g div:nth-child(5) {
+  background-image: url("../assets/img/5.jpg");
+}
+
+@media screen and (max-width: 1300px) {
+  aside {
+    font-size: 0.7em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .god {
+    flex-direction: column;
+  }
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+  aside {
+    height: 7vh;
+    z-index: 99;
+    width: 100%;
+    transition: all 0.5s ease;
+    display: block;
+  }
+  aside.show {
+    height: 100vh;
+  }
+  .hamburger {
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 7vh;
+    position: absolute;
+    right: 5%;
+    top: 0;
+    gap: 5px;
+    cursor: pointer;
+  }
+  .hamburger div {
+    width: 35%;
+    height: 3px;
+    background-color: #ebebeb;
+    transition: all 0.3s;
+  }
+  .hamburger.cross div:nth-child(1) {
+    rotate: -50deg;
+    transform: translateY(12.5px);
+  }
+  .hamburger.cross div:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.cross div:nth-child(3) {
+    rotate: 50deg;
+    transform: translateY(-12.5px);
+  }
+  aside ul {
+    width: fit-content;
+    margin: 30vh auto;
+    font-size: 1.7em;
+  }
+
+  .container #home {
+    flex-direction: column-reverse;
+    padding: 5vh 0 0 0;
+  }
+  .container #home .text {
+    width: 80%;
+    text-align: center;
+  }
+  .container #biography .content {
+    justify-content: center;
+  }
+  .container #biography .content .info {
+    width: 80%;
+    height: 50%;
+    font-size: 0.8rem;
+  }
+  .container #biography .content .info h1 {
+    text-align: right;
+  }
+  .container #famous-movies .title {
+    text-align: center;
+  }
+  .container #famous-movies .movie {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container #famous-movies .movie .m-big {
+    order: 1;
+    border: none;
+    height: 70%;
+    border-bottom: 3px solid white;
+  }
+  .container #famous-movies .movie .m-big div {
+    height: 63%;
+  }
+  .container #famous-movies .movie .m-list {
+    order: 2;
+    width: 100%;
+  }
+  .container #famous-movies .movie .m-list .m {
+    height: 7.5%;
+    transition: all 0.3s;
+  }
+  .container #famous-movies .movie .m-list .m:hover {
+    height: 10%;
+  }
+  .container #quotes .q1,
+  .container #quotes .q2,
+  .container #quotes .q3 {
+    justify-content: center;
+  }
+  .container #quotes .q1 .q,
+  .container #quotes .q2 .q,
+  .container #quotes .q3 .q {
+    width: 80%;
+  }
+  .container #gallery .g {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container #gallery .g div {
+    height: 20%;
+    width: 80%;
+  }
+  .container #gallery .g div:hover {
+    height: 300%;
+  }
+}
