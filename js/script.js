@@ -42,12 +42,12 @@ function showP(n) {
 images.forEach((image, index) => {
   image.addEventListener("click", () => {
     const imagePaths = [
-      "../assets/img/satantango.jpg",
-      "../assets/img/turin.png",
-      "../assets/img/werck.jpg",
-      "../assets/img/damn.jpeg",
-      "../assets/img/london.jpg",
-    ];
+        "../Bela-Tarr/assets/img/satantango.jpg",
+        "../Bela-Tarr/assets/img/turin.png",
+        "../Bela-Tarr/assets/img/werck.jpg",
+        "../Bela-Tarr/assets/img/damn.jpeg",
+        "../Bela-Tarr/assets/img/london.jpg",
+      ];
     mBig.style.backgroundImage = `url(${imagePaths[index]}`;
     texts.forEach((text, textIndex) => {
       text.style.display = index === textIndex ? "block" : "none";
